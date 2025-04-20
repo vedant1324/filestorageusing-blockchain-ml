@@ -1,0 +1,16 @@
+import Image from "next/image";
+import {ModeToggle} from "./components/theme/theme-button";  
+import { ThemeProvider } from "next-themes";
+export default function Home() {
+  return (
+    <ThemeProvider attribute="class">
+      <div className="container mx-auto p-4">
+      <div className="bg-white text-black dark:bg-zinc-900 dark:text-white">
+  This content changes with theme!
+</div>
+        <ModeToggle />
+        {/* Your other content */}
+      </div>
+    </ThemeProvider>
+  );
+}

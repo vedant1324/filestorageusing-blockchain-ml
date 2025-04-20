@@ -1,0 +1,255 @@
+1)what is os?
+2)what are diffrent types of os?
+3)Operating System functions?
+4) explain command line options.
+
+
+
+////16/12
+// Single User OS //
+- OS is software that manages and controls computer hardware and software resources; it acts as an intermediary between the user and hardware. There are several types of OS:
+
+1. Single User OS -
+    Example: MS-DOS
+    These OS can only run one program at a time and have only one user at a time.
+
+2. Single User Multitasking OS -
+   These OS run multiple programs at a time, simultaneously enabling users to multitask.
+
+3. Multiuser OS -
+   Supports multiple users accessing the system concurrently with different accounts. Common in server environments.
+
+4. Real-Time Operating System (RTOS) -
+   Designed to meet specific timing constraints and deadlines, used in embedded systems, control systems, and applications where timing is critical. Examples: VxWorks, QnX.
+   Time-sensitive applications where tasks are to be executed within a time constraint.
+
+5. Network OS -
+   Designed to manage and support network resources and services, facilitates communication and resource sharing among multiple computers.
+
+6. Embedded OS -
+   Example: FreeRTOS, Android Things
+   Designed for use in embedded systems such as IoT devices, TVs.
+
+**Linux OS**
+1. Linux Distribution (LD) -
+   - Linux distributions are different versions and variations of Linux, while Linux is itself a kernel - the heart of the OS. LD packages Linux with different software, libraries, and applications to create a complete OS.
+   - Each distribution has different characteristics, a package manager, default desktop environment, and pre-installed software.
+   - Some popular LDs include Ubuntu, Fedora, Red Hat, etc. These LDs cater to different needs and preferences, whether it's user-friendliness, stability, or customizations.
+   - LDs provide a wide range of choices for users that suit their preferences.
+
+   a) Ubuntu - Ubuntu is a user-friendly OS known for its ease of use and extensive community support. It is widely used by both beginners and advanced users.
+
+   b) CentOS - "Community ENTerprise Operating System," is a Linux distribution that provides a free, open-source, and community-supported platform designed for enterprise-level computing.
+        Community-Based: CentOS is built from the open-source code of Red Hat Enterprise Linux (RHEL). It aims to provide a free alternative with binary compatibility to RHEL.
+        Stability: Known for its stability and reliability, CentOS is often used in server environments where a robust and predictable operating system is essential.
+
+2) Linux Installation
+   a) To download Linux on our system, we need to have the LD image file downloaded inside the local drive of your computer.
+   b) To download the image file, we should go to the official Linux site, which is required on your computer.
+   c) We should create a bootable USB (PD) - Tools Rufus tool (Windows), Etcher (Linux).
+   d) After completion of your USB, insert it into your system and restart.
+   e) Choose installation options like language, keyboard layout, disk partitioning, then create a username and password to log in to a Linux OS.
+   f) Once you have completed all the necessary installation steps, complete the installation and start the system.
+   g) Now you can log in to your Linux OS.
+
+3) Features of Linux
+   a) Open Source
+      It is an open-source OS, meaning that it is open-sourced and publicly available. This means that users can customize and distribute the OS accordingly.
+
+   b) Stability and Security
+      Linux is known for its stability and security. It has a robust architecture, making it less prone to crashes and malware attacks compared to other OS.
+
+   c) Customization
+      Linux provides high-level customizations. Users can choose from various desktop environments, packages, themes to create a customized OS.
+
+   d) Linux offers a powerful command-line interface, which is a shell-based command line, allowing users to perform advanced tasks and automation, giving more control and flexibility in managing and controlling the system.
+
+   e) Package Management
+      Linux comes with package management that makes it easy to install, update, and remove software. This simplifies the package management process and ensures that the system stays up-to-date.
+
+   f) Multiuser and Multitasking
+      Linux supports multiple users simultaneously, making it suitable for server environments. It also allows multitasking, enabling users to load multiple applications together.
+
+   g) Compatibility
+      Linux supports a wide range of hardware architectures, making it compatible with various devices from smartphones and laptops to supercomputers.
+
+   h) Community and Support
+      Linux has a vibrant community of users and developers, online forums, documentation, community-driven projects providing resources and assistance for troubleshooting and learning.
+
+
+ls - listing files inside directory
+mkdir making a directory
+cd - shifting to the directory 
+touch - open the file if exists or create with the name mentioned if doesnt exist
+rm- removes the specific file 
+  syntax: rm file.txt
+cp - stands for copy
+  syntax: cp file1.txt newfile1.txt
+mv - stands for move it moves files tp sprecified location
+cat - to display the file
+grep - searches specific word in file
+ syntax- grep "yourkeyword to search"
+ example. grep "vishal" file1.txt
+chmod : modification of file permission
+ ex. chmod 400 
+rmdir : used to remove the directory
+ syntax rmdir [options] directory
+vi : create a file and open it 
+ syntax: vi filename.txt
+
+
+
+
+
+////17/12
+
+There are three types of permisions-
+ 1)Read(r)
+ 2)Write(w)
+ 3)Execute(x)
+
+to view the permission of a file or a directory you can use "ls -l" command. The output will show the series of characters representing the permisions for the file or directory. The firest charecter indicates the type of file (- represents a regular file , d that represents a single file, the next line character represent the permission or character for the file )
+
+they arediveded into three sets of three character each
+ the first set represents the permision for the owne
+ the second set represents the premision for group
+ the third set represents the premision for others
+
+in set of three character are follwing
+  first char represents - read 
+  second char represents - write
+  therd char represents - execute
+
+**if a permission is granted corresponding character will be present , If it is not granted the "-" will be present in place of character
+  example. rwxr--r--
+  here rwx - represents owner
+       r-- - group
+       r-- - others
+ it means that owner has read-write-execute permision,group and others have only have read access
+
+
+**to change the permision of file or directory one can use "chmod" command followd by permision and file or folder
+ chmod <permisions> <file/folder> 
+
+ example. chmod u+ Command  -  It used to add specific permision for the owner of a directery or command 
+          chmod u+x file1.txt - so here in this example "u" stands for user or owner and "+" symbol indicates that you want to add a permision.
+
+***what is owner , what is group , what is other??
+In linux users and groups are eccensial part of system security adn acccess control 
+  -users are individuals who interact with system.
+  -groups are set of users who share common permision and access rights.
+users -each user in linux have unique name and user id and can have their own home directory and are associated with specific permision and previlages they can execute command on access files and perform various actions on system.
+Groups -groups on the other hand are used to organise the user with similar access requirement users cans be members of multiple groups and gorups can have specific permisions allowed to them this allows easier management of permission and access control. By assigning users to appropriate groups system administrators can control who has access to the file directories or system resources. It helps maintening the security and users only have access to required data.
+
+users and groups play vital role in security of files and folders from unotherised access
+
+ChatGPT
+Here is the corrected version:
+
+File Permissions:
+In Linux, file permissions determine the level of access that users and groups have to a file or directory.
+
+There are three types of permissions:
+
+Read (r)
+Write (w)
+Execute (x)
+To view the permissions of a file or a directory, you can use the "ls -l" command. The output will show a series of characters representing the permissions for the file or directory. The first character indicates the type of file (- represents a regular file, d represents a directory, and the next nine characters represent the permissions for the file).
+
+They are divided into three sets of three characters each:
+
+The first set represents the permissions for the owner.
+The second set represents the permissions for the group.
+The third set represents the permissions for others.
+In each set of three characters:
+
+The first character represents read.
+The second character represents write.
+The third character represents execute.
+If a permission is granted, the corresponding character will be present. If it is not granted, "-" will be present in place of the character. For example, "rwxr--r--" means the owner has read-write-execute permissions, and the group and others have only read access.
+
+To change the permissions of a file or directory, one can use the "chmod" command followed by permissions and the file or folder:
+
+bash
+Copy code
+chmod <permissions> <file/folder>
+Example:
+
+bash
+Copy code
+chmod u+rx file1.txt
+Here, "u" stands for user or owner, and "+" indicates that you want to add permissions.
+
+What is Owner, What is Group, What is Other?
+In Linux, users and groups are essential parts of system security and access control:
+
+Users are individuals who interact with the system.
+Groups are sets of users who share common permissions and access rights.
+Users: Each user in Linux has a unique name and user ID, can have their own home directory, and is associated with specific permissions and privileges. Users can execute commands, access files, and perform various actions on the system.
+
+Groups: Groups are used to organize users with similar access requirements. Users can be members of multiple groups, and groups can have specific permissions allowed to them. This allows easier management of permissions and access control. By assigning users to appropriate groups, system administrators can control who has access to file directories or system resources, maintaining security, and ensuring users only have access to required data.
+
+Users and groups play a vital role in the security of files and folders, preventing unauthorized access.
+
+
+**sudo command
+ stands for : superuser do 
+ Is used to run command using administrative rightss. 
+
+******commands:  sudo useradd <username>
+                 sudo passwd <related username>
+ec2-user -console and putty it takes key as password but when using  su command you will need to first set the password for it
+
+******commands: sudo groupadd <groupname> //create a group 
+                sudo usermod -a(associate) -G(group) <username> // to associate a user to a group                                            
+                sudo chown -R :<GroupName> <path to the directory> //if a we want an ownership of any directory to a group then we use the  command.
+   here the pregroup name was assigned to ec2-user but after using sudo chown -R :students ~/ycce the group(group ownership) name changed to ycce 
+
+
+
+
+chmod command -
+ this command allows you to set file permision using numeric values , (r,w,x) is assigned to the numeric value
+    1) 4 represents read permision.
+    2) 2 represents write permision.
+    3) 1 represents execute permision.
+   one can combine this values to design permsions
+   example.  chmod 400 filename.txt // this will only give read permision
+             chmon 421 filename.txt // this will give rwx permision
+   There are different numeric values which we can use to set permission on different files using chmod command between chmod command
+
+ 
+    
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
